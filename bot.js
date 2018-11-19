@@ -11,7 +11,11 @@ function react() {
 if (message.attachments.size > 0) {
     setTimeout(react, 500);
     message.react("🔼")
-  }
+  }else
+    if (message,content.startsWith("~")) {
+      setTimeout(react,500);
+      message.react("🔼")
+    }
   }else
    if (message.content.startsWith("!ping")) {
      message.channel.send("Pong!");
