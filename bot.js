@@ -15,8 +15,7 @@ if (message.attachments.size > 0) {
     if (message,content.startsWith("~")) {
       setTimeout(react,500);
       message.react("🔼")
-    }
-  }else
+    }else
    if (message.content.startsWith("!ping")) {
      message.channel.send("Pong!");
      console.log("Pinged");
