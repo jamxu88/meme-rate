@@ -17,16 +17,14 @@ if (message.attachments.size > 0) {
   if (x % 23 == 0) {
     message.react("💎")
   }else
-  if (!message.content.startsWith(prefix)) return;
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
-    if (message.content.startsWith(prefix + "ping")) {
-      message.channel.send("Pong!");
-      console.log("Pinged");
+   if (message.content.startsWith("!ping")) {
+     message.channel.send("Pong!");
+     console.log("Pinged");
     }else
-    if (message.content.startsWith(prefix + "creator")) {
+    if (message.content.startsWith("!creator")) {
       message.channel.send("This bot was created by jam#3515");
     }else
-    if (message.content.startsWith(prefix + "github")) {
+    if (message.content.startsWith("!github")) {
       message.channel.send("<https://github.com/jamxu88/>");
     }
   });
