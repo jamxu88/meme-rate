@@ -2,11 +2,13 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on("ready", () => {
   console.log("Jam-Bot Online");
+  x = 0
 });
 const prefix = "!";
 client.on("message", (message) => {
 function react() {
   message.react("🔽")
+  x = x + 1
 }
 if (message.attachments.size > 0) {
     setTimeout(react, 500);
@@ -17,7 +19,7 @@ if (message.attachments.size > 0) {
       message.react("🔼")
     }else
    if (message.content.startsWith("!ping")) {
-     message.channel.send("Pong!");
+     message.channel.send("Pong! There have been "+ x +" reacts made to date.");
      console.log("Pinged");
     }else
     if (message.content.startsWith("!creator")) {
