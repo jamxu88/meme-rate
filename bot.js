@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on("ready", () => {
   console.log("Meme-Rate Online");
-  x = 177
+  x = 179
 });
 const prefix = "!";
 client.on("message", (message) => {
@@ -19,7 +19,7 @@ if (message.attachments.size > 0) {
       message.react("🔼")
     }else
    if (message.content.startsWith("!ping")) {
-     message.channel.send("Pong! There have been "+ x +" reacts made to date.");
+     message.channel.send("Pong! There have been "+ x +" reacts made to date. Response Time:"+ new Date().getTime() - message.createdTimestamp + " ms");  
      console.log("Pinged");
     }else
     if (message.content.startsWith("!creator")) {
