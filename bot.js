@@ -19,7 +19,8 @@ if (message.attachments.size > 0) {
       message.react("🔼")
     }else
    if (message.content.startsWith("!ping")) {
-     message.channel.send("Pong! There have been "+ x +" reacts made to date. Response Time:" + new Date().getTime() - message.createdTimestamp + " ms Latency");
+     responsetime = new Date().getTime() - message.createdTimestamp
+     message.channel.send("Pong! There have been "+ x +" reacts made to date. Response Time:" + responsetime + " ms Latency");
      console.log("Pinged");
     }else
     if (message.content.startsWith("!creator")) {
