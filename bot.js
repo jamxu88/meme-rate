@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on("ready", () => {
-  console.log("Jam-Bot Online");
-  x = 0
+  console.log("Meme-Rate Online");
+  x = 177
 });
 const prefix = "!";
 client.on("message", (message) => {
