@@ -14,6 +14,8 @@ if (message.attachments.size > 0) {
     setTimeout(react, 500);
     message.react("🔼")
   }else
+    if(message.content.includes("xd")) {
+      message.channel.send("no");
     if (message.content.startsWith("'")) {
       setTimeout(react,500);
       message.react("🔼")
